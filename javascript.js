@@ -1,0 +1,4 @@
+function clearCanvas(){
+    locationreload();
+}
+

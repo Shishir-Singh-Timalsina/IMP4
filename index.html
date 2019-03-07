@@ -20,7 +20,16 @@
 
         
         <div class="container">
+            <canvas id=canvas width=500 height=500
+            onmousedown="mouseDown(event)"
+            onmouseup="mouseUp(event)"
+            onmousemove="mouseMove(event)">
+            </canvas>
+
+            <!--Refresh the canvas-->
         </div>
+        <button onclick="clearCanvas()">Reset Canvas</button>
+
         
     </body>
 </html>
