@@ -10,7 +10,7 @@ function point( taken_x_coordinate,taken_y_coordinate ){
     this.y = taken_y_coordinate ;
 }
 
-function MouseDown( event ){
+function mouseDown( event ){
     var mouse_x, mouse_y ;
 
     if ( event.offsetX && event.offsetY ){
@@ -29,7 +29,7 @@ function MouseDown( event ){
     draw() ;
 }
 
-function MouseUp( event ){
+function mouseUp( event ){
     if ( drawing_line == true ){
         var mouse_x, mouse_y ;
         if ( event.offsetX && event.offsetY ){
@@ -55,7 +55,7 @@ function MouseUp( event ){
 }
 
 
-function MouseMove( event ){
+function mouseMove( event ){
     if ( drawing_line == true ){
         var mouse_x, mouse_y ;
         if ( event.offsetX && event.offsetY ){
@@ -105,3 +105,6 @@ function draw(){
     }
 }
 
+function clearCanvas(){
+    location.reload();
+}
