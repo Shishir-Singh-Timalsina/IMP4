@@ -13,24 +13,25 @@
         <script src="javascript.js"></script>
 
     </head>
-    <body>
+    <body onload="draw()">
         
         
         <h2 class="mainHeader">WELCOME TO IMP COURSE (LAB 4)</h2>
 
         
         <div class="container">
-            <canvas id=canvas width=500 height=500
-            onmousedown="mouseDown(event)"
-            onmouseup="mouseUp(event)"
-            onmousemove="mouseMove(event)">
+             <canvas id=drawing
+            width = 680 height = 500
+            onmousedown = "MouseDown( event )"
+            onmousemove = "MouseMove( event)"
+            onmouseup = "MouseUp( event )">
             </canvas>
 
-            <!--Refresh the canvas-->
         </div>
+              
+        <!--Refresh the canvas-->
         <button onclick="clearCanvas()">Reset Canvas</button>
 
-        
     </body>
 </html>
 
