@@ -10,7 +10,8 @@
         <link rel="stylesheet" href="CSS.css">
         
         <!-- Javascript -->
-        <script src="javascript.js"></script>
+        <script src="canvasjavascript.js"></script>
+        <script src="gamejavascript.js"></script>
 
     </head>
     <body onload="draw()">
@@ -19,17 +20,25 @@
         <h2 class="mainHeader">WELCOME TO IMP COURSE (LAB 4)</h2>
 
         <div class="container">
-             <canvas id=drawing
-            width = 800 height = 800
-            onmousedown = "mouseDown( event )"
-            onmousemove = "mouseMove( event)"
-            onmouseup = "mouseUp( event )">
-            </canvas>
+            
+            <!--Simpl Canvas-->
+            <div class="canvasContainer">
+                <canvas id=drawing width = 500 height = 300
+                    onmousedown = "mouseDown( event )"
+                    onmousemove = "mouseMove( event)"
+                    onmouseup = "mouseUp( event )">
+                </canvas>
+            </div>
+            <!--Refresh the canvas-->
+            <button onclick="clearCanvas()">Reset Canvas</button>
+        
+            <!--Simple Game-->
+            <div class="gameContainer">
 
+            </div>
         </div>
-              
-        <!--Refresh the canvas-->
-        <button onclick="clearCanvas()">Reset Canvas</button>
+
+
 
     </body>
 </html>
