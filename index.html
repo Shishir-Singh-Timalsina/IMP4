@@ -10,8 +10,11 @@
         <link rel="stylesheet" href="CSS.css">
         
         <!-- Javascript -->
+        <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
         <script src="canvasjavascript.js"></script>
         <script src="gamejavascript.js"></script>
+
 
     </head>
     <body onload="draw()">
@@ -23,23 +26,23 @@
             
             <!--Simpl Canvas-->
             <div class="canvasContainer">
-                <canvas id=drawing width = 500 height = 300
+                <canvas id="drawingCanvas" width ="500" height ="300"
                     onmousedown = "mouseDown( event )"
                     onmousemove = "mouseMove( event)"
                     onmouseup = "mouseUp( event )">
                 </canvas>
             </div>
             <!--Refresh the canvas-->
-            <button onclick="clearCanvas()">Reset Canvas</button>
+            <button id="canvasReset" onclick="clearCanvas()">Reset Canvas</button>
         
             <!--Simple Game-->
             <div class="gameContainer">
-
+                    <h3 class="header">Click the button to play the game</h3>
+                    <h3 class="points"></h3>
+                    <input type="button" class="start" value="Start game">
+                    <canvas id="canvas" width="600" height="335"></canvas>
             </div>
         </div>
-
-
-
     </body>
 </html>
 

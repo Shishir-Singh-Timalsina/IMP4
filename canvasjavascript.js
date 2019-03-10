@@ -77,7 +77,7 @@ function mouseMove( event ){
 
 
 function draw(){
-    var canvas = document.getElementById( "drawing" ) ;
+    var canvas = document.getElementById( "drawingCanvas" ) ;
     var context = canvas.getContext("2d") ;
 
     context.fillStyle = "#d1d2d3" ;
