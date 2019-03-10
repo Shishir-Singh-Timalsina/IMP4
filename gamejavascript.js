@@ -59,10 +59,11 @@ jQuery(document).ready(function($) {
         this.ctx = ctx;
 
         this.draw = function(){
+            ctx.fillStyle = "#f2c100"; //yellow
+            ctx.beginPath();
             this.ctx.rect(this.x,this.y,this.width,this.height);
-            this.ctx.fillStyle = "yellow" ;
+            this.ctx.fill();
 
-            this.ctx.stroke();
         }
     }
 
@@ -79,19 +80,23 @@ jQuery(document).ready(function($) {
          reg.draw();
          ctx.closePath();
 
-        if( time -1 >= 0)
+        if( time -1 >= 0){
              setTimeout( function() { updateTimeText(time-1,ctx) }, 1000);
-        return;
-            
+            return;
+        }       
     }
 
     /*updating points*/ 
     function updatePoint(point){
         var text = "Point: " + point + "";
+        console.log(point);
         $(".points").html(text);
+
     }
 
+    /*Starting the game */
     $('.start').on('click', function(){
         timer(10,ctx);
-    });			
+    });	
+		
 });

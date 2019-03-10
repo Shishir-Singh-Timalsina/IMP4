@@ -20,9 +20,10 @@ button#canvasReset{
 #canvas{
     background-color: #d1d2d3;
 
+} 
+.header{
+    float: left;
+    margin-right: 100px;
 }
-points{
-    text-align:right;
-    float:right;
-}
+
 
