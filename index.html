@@ -12,7 +12,8 @@
         <!-- Javascript -->
         <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-        <script src="canvasjavascript.js"></script>
+        <!--<script src="canvasjavascript.js"></script>-->
+        <script src="canvasjs.js"></script>
         <script src="gamejavascript.js"></script>
 
 
@@ -26,10 +27,7 @@
             
             <!--Simpl Canvas-->
             <div class="canvasContainer">
-                <canvas id="drawingCanvas" width ="500" height ="300"
-                    onmousedown = "mouseDown( event )"
-                    onmousemove = "mouseMove( event)"
-                    onmouseup = "mouseUp( event )">
+                <canvas id="myCanvas" width ="500" height ="300">
                 </canvas>
             </div>
             <!--Refresh the canvas-->
