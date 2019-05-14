@@ -17,8 +17,6 @@ function draw(){
         end_y = event.clientY - canvas.getBoundingClientRect().top;
         draw();
        
-
-
      }
 
     function currentPoint(event){
@@ -36,10 +34,19 @@ function draw(){
     canvas.addEventListener('mousedown',setStartPoint,false);
     canvas.addEventListener('mousemove',currentPoint,false);
     canvas.addEventListener('mouseup',setEndPoint,false);
+    document.getElementById("canvasReset").addEventListener("click",clearCanvas,false);
+
+
+    function clearCanvas(){
+        location.reload();
+
+        ctx.fillStyle = "#d1d2d3";
+        ctx.fillRect(0,0,canvas.clientWidth,canvas.height);
+    }
+
 
 
 }
 
-function clearCanvas(){
-    location.reload();
-}
+
+

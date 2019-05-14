@@ -3,14 +3,18 @@ jQuery(document).ready(function($) {
     var ctx = canvas.getContext("2d");
     var mouseIsDown = false;
     var canvasX = [], canvasY = [];
-    var rectangle;
 
     var point = 0;
 
     canvas.addEventListener("mousedown", mouseDown, false);
-    canvas.addEventListener("mousemove", mouseXY, false);
+  //  canvas.addEventListener("mousemove", mouseXY, false);
 
-    document.body.addEventListener("mouseup", mouseUp, false);
+    //canvas.addEventListener("mouseup", mouseUp, false);
+
+
+    //document.body.addEventListener("mouseup", mouseUp, false);
+
+
        
     function checkIfClickOnRect(){
         if (ctx.isPointInPath(canvasX[0], canvasY[0]) && mouseIsDown ){
@@ -22,18 +26,18 @@ jQuery(document).ready(function($) {
         }
     }
       
-    function mouseDown(){
+    function mouseDown(){           //MouseDown
         mouseIsDown = true;
-        mouseXY();
+       mouseXY();
         checkIfClickOnRect();
     }
 
-    function mouseUp() {
+    function mouseUp() {            //MouseUP
         mouseIsDown = false;
         mouseXY();
     }
 
-    function mouseXY(e) {
+    function mouseXY(e) {           //Mouse event
         if (!e){
             e = event;
             canvasX[0] = e.pageX - canvas.offsetLeft;
@@ -50,6 +54,8 @@ jQuery(document).ready(function($) {
     function randomy(){
         return Math.floor((Math.random() * 250) + 1);
     }
+
+
 
     function Shape(x,y,width,height,ctx){
         this.x = x;
