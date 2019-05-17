@@ -1,5 +1,5 @@
 function draw(){
-    var canvas = document.getElementById("myCanvas");
+    var canvas = document.getElementById("drawCanvas");
     var ctx = canvas.getContext("2d");
     var start_x, start_y, end_x, end_y, x,y ;
 
@@ -38,13 +38,13 @@ function draw(){
 
 
     function clearCanvas(){
-        location.reload();
+      location.reload();
+    
 
-        ctx.fillStyle = "#d1d2d3";
-        ctx.fillRect(0,0,canvas.clientWidth,canvas.height);
+        /*ctx.fillStyle = "#d1d2d3";
+        ctx.fillRect(0,0,canvas.clientWidth,canvas.height);*/
     }
-
-
+    
 
 }
 

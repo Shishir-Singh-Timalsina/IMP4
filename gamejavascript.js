@@ -1,5 +1,5 @@
 jQuery(document).ready(function($) {
-    var canvas = document.getElementById("canvas");  
+    var canvas = document.getElementById("gameCanvas");  
     var ctx = canvas.getContext("2d");
     var mouseIsDown = false;
     var canvasX = [], canvasY = [];

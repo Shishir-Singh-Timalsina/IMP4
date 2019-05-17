@@ -19,7 +19,7 @@
 
 
     </head>
-    <body onload="draw()">
+    <body>
         
         
         <h2 class="mainHeader">WELCOME TO IMP COURSE (LAB 4)</h2>
@@ -28,18 +28,21 @@
             
             <!--Simple Canvas-->
             <div class="canvasContainer">
-                <canvas id="myCanvas" width ="500" height ="300">
+                <canvas id="drawCanvas" width ="500" height ="300">
                 </canvas>
             </div>
+            <button onclick="draw()">Start Drawing</button>
             <!--Refresh the canvas-->
             <button id="canvasReset">Reset Canvas</button>
+
         
             <!--Simple Game-->
             <div class="gameContainer">
                     <h3 class="header">Click the button to play the game</h3>
                     <h3 class="points">Points:</h3>
                     <input type="button" class="start" value="Start game">
-                    <canvas id="canvas" width="600" height="335"></canvas>
+                    <button onclick="startGame()">Start New game</button>
+                    <canvas id="gameCanvas" width="600" height="335"></canvas>
             </div>
         </div>
     </body>

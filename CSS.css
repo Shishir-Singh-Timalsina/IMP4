@@ -17,10 +17,6 @@ button#canvasReset{
     border: 2px solid black;
 }
 
-#canvas{
-    background-color: #d1d2d3;
-
-} 
 .header{
     float: left;
     margin-right: 100px;
